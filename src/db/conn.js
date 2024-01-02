@@ -1,12 +1,13 @@
 const mongoose = require('mongoose')
 
 async function main() {
+  require('dotenv').config();
 
   try {
     mongoose.set('strictQuery', true)
 
     await mongoose.connect(
-      'mongodb+srv://lucasrbordignon:xk2zyrkMO7QcY42V@user-crud.assez7n.mongodb.net/?retryWrites=true&w=majority'
+      `mongodb+srv://${process.env.USER_MONGODB}:${process.env.PASSWORD_MONGODB}@user-crud.assez7n.mongodb.net/?retryWrites=true&w=majority`
     )
 
     console.log('Conectado ao banco!')
