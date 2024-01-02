@@ -1,0 +1,5 @@
+#Dependency directories
+/node_modeles
+
+# Ignore arquivos relacionados às chaves de API
+.env
